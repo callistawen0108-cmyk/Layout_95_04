@@ -1,0 +1,63 @@
+body{
+    background-image: url("bg.jpg");
+}
+
+img.ukuran{
+    height: 400 px;
+    width: 300 px;
+}
+
+img.lengkungan{
+    height: 150 px;
+    width: 150 px;
+    border-radius: 20% 0% 20% 0%;
+}
+
+div.kelompok{
+    height: 450px;
+    width: 470px;
+    background-color: darksalmon;
+    border-radius: 20%;
+    text-align: center;
+    padding: 5px;
+}
+
+div.kelompok img{
+    height: 450px;
+    width: 470px;
+    border-radius: 20%;
+    border: 1px solid;
+}
+
+dif.efek{
+    height: 300px;
+    width: 300px;
+    background-color: bisque;
+    border-radius: 20%;
+    text-align: center;
+    padding: 5%;
+}
+
+dif.efek img{
+    height: 450 px;
+    width: 470 px;
+    border-radius: 20%;
+    border: 2 px solid cadetblue;
+}
+
+dif.efek:hover{
+    height: 350 px;
+    width: 300 px;
+    background-color: coral;
+    box-shadow: 15px 15 px 10 px darksalmon;
+}
+
+p.external{
+    font-family: "glitter";
+    font-size: 30pt;
+}
+
+@font-face{
+    font-family:"glitter" ;
+    src: url("Magic\ Crush.otf")
+}

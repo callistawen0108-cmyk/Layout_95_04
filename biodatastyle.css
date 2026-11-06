@@ -1,0 +1,788 @@
+body{
+    background-color: #c6a0f4;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position: fixed;
+    background-image: url(smth.jpg);
+}
+
+
+.planet {
+    position: fixed;
+    right: 1260px;
+    bottom: 30px;
+    width: 300px;
+    height: 250px;
+    object-fit: contain;
+    padding: 0;
+    border-radius: 0;
+    display: block;
+    animation: gentleBounce 2s ease-in-out infinite;
+    filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.9))
+            drop-shadow(0px 0px 25px rgba(166, 76, 186, 0.8));
+    transform: scale(1.15);
+}
+@keyframes gentleBounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px) rotate(-5deg); }
+    100% { transform: translateY(0); }
+}
+
+
+h2{
+    text-align: center;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #fcd6ff;
+    background-color: #935bd8;
+    padding: 0px;
+    width: 100%;
+    font-family:"curls";
+}
+@font-face{
+    font-family:"curls" ;
+    src: url("Bremlin.otf")
+}
+
+h1{
+    text-align: center;
+    color: #461b50;
+    background-color: #c6a0f4;
+    padding: 0px;
+    width: 100%;
+    font-family: "mirage";
+}
+@font-face{
+    font-family:"mirage" ;
+    src: url("Miracle\ History.ttf")
+}
+
+
+div.isi{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: left;
+    justify-content: space-around;
+    gap: 5rem;
+    flex: 1;
+    padding-right: 50px;
+    align-items: left;
+    color: #330e3a;
+    font-family: "glitter";
+}
+@font-face{
+    font-family:"glitter" ;
+    src: url("Magic\ Crush.otf")
+}
+
+.biodata{
+    display: flex;
+    margin: 30px auto;
+    width: fill;
+    background-color: rgb(255, 255, 255);
+    align-items: left;
+     background-image: url("blue\ lace.png"), url("purple\ lace.png");
+    background-repeat: no-repeat, no-repeat;
+    background-position: left center, right center;
+    background-size: contain, contain;
+}
+
+.container{
+    margin: 100px auto;
+    width: 75% auto;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    gap: 60px;
+}
+
+div.foto{
+    position: relative;
+    width: 300px;
+    height:300px;
+    overflow: hidden;
+    border-radius: 15px;
+    float: left;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid rgb(234, 192, 255); 
+
+}
+
+div.foto img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+
+div.foto img.top{
+    opacity: 1;
+    z-index: 2;
+}
+
+div.foto:hover img.top{
+    opacity: 0;
+    transform: scale(1.1);
+}
+
+div.foto img.bottom{
+    opacity: 0;
+    z-index: 1;
+}
+
+div.foto:hover img.bottom{
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+h3{
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #fcd6ff;
+    background-color: #a64cba;
+    padding: 15px 20px;
+    width: 100%;
+    margin: 30px auto 20px auto;
+    border-radius: 10px;
+    font-size: 28px;
+    letter-spacing: 2px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    font-family: "mofu";
+}
+@font-face{
+    font-family:"mofu" ;
+    src: url("Softspoken-ScriptFreeDemo.otf")
+}
+
+div.lagu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px; 
+    padding: 20px;
+    width: 100%;
+}
+
+div.lagu audio {
+    width: 100%;
+    height: fit-content;
+    min-height: 40px;
+    margin-top: 10px;
+}
+
+div.girlhell{
+    width: 240px;
+    height: 270px;
+    border-radius: 15px;
+    background-color: rgb(146, 210, 238);
+    box-shadow: #bc2c2c;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    padding: 10px;
+}
+div.girlhell:hover{
+    background-color: rgb(180, 230, 255);
+    box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.8), 0px 0px 15px rgba(153, 50, 50, 0.6); 
+    border: 2px solid white
+}
+
+div.pistol{
+    width: 240px;
+    height: 270px;
+    border-radius: 15px;
+    background-color: rgb(146, 210, 238);
+    box-shadow: #bc2c2c;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    padding: 10px;
+}
+div.pistol:hover{
+    background-color: rgb(180, 230, 255);
+    box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.8), 0px 0px 15px rgba(153, 50, 50, 0.6); 
+    border: 2px solid white
+}
+
+div.bothered{
+    width: 240px;
+    height: 270px;
+    border-radius: 15px;
+    background-color: rgb(146, 210, 238);
+    box-shadow: #bc2c2c;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    padding: 10px;
+}
+div.bothered:hover{
+    background-color: rgb(180, 230, 255);
+    box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.8), 0px 0px 15px rgba(153, 50, 50, 0.6); 
+    border: 2px solid white
+}
+
+div.attack{
+    width: 240px;
+    height: 270px;
+    border-radius: 15px;
+    background-color: rgb(146, 210, 238);
+    box-shadow: #bc2c2c;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    padding: 10px;
+}
+div.attack:hover{
+    background-color: rgb(180, 230, 255);
+    box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.8), 0px 0px 15px rgba(153, 50, 50, 0.6); 
+    border: 2px solid white
+}
+
+
+
+div.planetlord-wrapper {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 30px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+div.planetlord1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(200, 230, 255, 0.95); 
+    padding: 15px;
+    border-radius: 15px;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+    width: 240px;
+    height: 270px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 3px solid rgba(166, 76, 186, 0.3);
+}
+div.planetlord1:hover {
+    transform: scale(1.12) translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    background: rgba(220, 240, 255, 1); 
+    border-color: #a64cba;
+}
+div.planetlord1 img {
+    width: 200px; 
+    height: 200px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 3px solid #a64cba;
+    padding: 0;
+    transition: transform 0.3s ease;
+}
+div.planetlord1:hover img {
+    transform: scale(1.05);
+}
+div.planetlord1 p {
+    margin-top: 12px;
+    font-weight: bold;
+    color: #461b50;
+    font-size: 20px; 
+    font-family: "curls", sans-serif;
+}
+
+div.planetlord2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(200, 230, 255, 0.95);
+    padding: 15px;
+    border-radius: 15px;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+    width: 240px;
+    height: 270px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 3px solid rgba(166, 76, 186, 0.3);
+}
+div.planetlord2:hover {
+    transform: scale(1.12) translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    background: rgba(220, 240, 255, 1);
+    border-color: #a64cba;
+}
+div.planetlord2 img {
+    width: 200px;
+    height: 200px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 3px solid #a64cba;
+    padding: 0;
+    transition: transform 0.3s ease;
+}
+div.planetlord2:hover img {
+    transform: scale(1.05);
+}
+div.planetlord2 p {
+    margin-top: 12px;
+    font-weight: bold;
+    color: #461b50;
+    font-size: 20px;
+    font-family: "curls", sans-serif;
+}
+
+div.planetlord3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(200, 230, 255, 0.95);
+    padding: 15px;
+    border-radius: 15px;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+    width: 240px;
+    height: 270px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 3px solid rgba(166, 76, 186, 0.3);
+}
+div.planetlord3:hover {
+    transform: scale(1.12) translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    background: rgba(220, 240, 255, 1);
+    border-color: #a64cba;
+}
+div.planetlord3 img {
+    width: 200px;
+    height: 200px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 3px solid #a64cba;
+    padding: 0;
+    transition: transform 0.3s ease;
+}
+div.planetlord3:hover img {
+    transform: scale(1.05);
+}
+div.planetlord3 p {
+    margin-top: 12px;
+    font-weight: bold;
+    color: #461b50;
+    font-size: 20px;
+    font-family: "curls", sans-serif;
+}
+
+div.planetlord4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(200, 230, 255, 0.95);
+    padding: 15px;
+    border-radius: 15px;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+    width: 240px;
+    height: 270px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 3px solid rgba(166, 76, 186, 0.3);
+}
+div.planetlord4:hover {
+    transform: scale(1.12) translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    background: rgba(220, 240, 255, 1);
+    border-color: #a64cba;
+}
+div.planetlord4 img {
+    width: 200px;
+    height: 200px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 3px solid #a64cba;
+    padding: 0;
+    transition: transform 0.3s ease;
+}
+div.planetlord4:hover img {
+    transform: scale(1.05);
+}
+div.planetlord4 p {
+    margin-top: 12px;
+    font-weight: bold;
+    color: #461b50;
+    font-size: 20px;
+    font-family: "curls", sans-serif;
+}
+
+
+div.makanan {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+img{
+    padding: 5px;
+    border-radius: 20px;
+}
+
+div.bakso{
+    width: 240px;
+    height: 270px;
+    border-radius: 15px;
+    background-color: rgb(234, 238, 146);
+    box-shadow: #bc792c;
+    margin-bottom: 25px;
+}
+div.bakso:hover{
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    transform: scale(1.1);
+}
+
+div.fettuccine{
+    width: 240px;
+    height: 270px;
+    border-radius: 15px;
+    background-color: rgb(234, 238, 146);
+    box-shadow: #bc792c;
+    margin-bottom: 25px;
+}
+div.fettuccine:hover{
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    transform: scale(1.1);
+}
+
+div.kwetiaw{
+    width: 240px;
+    height: 270px;
+    border-radius: 15px;
+    background-color: rgb(234, 238, 146);
+    box-shadow: #bc792c;
+    margin-bottom: 25px;
+}
+div.kwetiaw:hover{
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    transform: scale(1.1);
+}
+
+div.sandwich{
+    width: 240px;
+    height: 270px;
+    border-radius: 15px;
+    background-color: rgb(234, 238, 146);
+    box-shadow: #bc792c;
+    margin-bottom: 25px;
+}
+div.sandwich:hover{
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    transform: scale(1.1);
+}
+
+div.warna-wrapper{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 30px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    font-family:"curls";
+}
+
+div.warnadiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    font-family:"curls";
+}
+
+div.warnadiv:hover {
+    transform: scale(1.2) translateY(-10px);
+}
+
+div.warna-box {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    margin-bottom: 10px;
+    font-family:"curls";
+}
+
+div.warnadiv:hover .warna-box {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    transform: rotate(10deg);
+}
+
+div.warnap {
+    font-weight: bold;
+    color: #461b50;
+    font-size: 18px;
+    margin-top: 5px;
+    font-family:"curls";
+}
+
+
+div.purple {
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    font-family:"curls";
+}
+div.purple:hover {
+    transform: scale(1.2) translateY(-10px);
+}
+div.purple:hover .warna-box {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    transform: rotate(10deg);
+}
+div.purple p {
+    transition: color 0.3s ease;
+}
+div.purple:hover p {
+    color: #a32cc4;
+}
+
+div.violet {
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    font-family:"curls";
+}
+div.violet:hover {
+    transform: scale(1.2) translateY(-10px);
+}
+div.violet:hover .warna-box {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    transform: rotate(10deg);
+}
+div.violet p {
+    transition: color 0.3s ease;
+}
+div.violet:hover p {
+    color: #710193;
+}
+
+div.amethyst {
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    font-family:"curls";
+}
+div.amethyst:hover {
+    transform: scale(1.2) translateY(-10px);
+}
+div.amethyst:hover .warna-box {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    transform: rotate(10deg);
+}
+div.amethyst p {
+    transition: color 0.3s ease;
+}
+div.amethyst:hover p {
+    color: #a45ee5;
+}
+
+div.lavender {
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    font-family:"curls";
+}
+div.lavender:hover {
+    transform: scale(1.2) translateY(-10px);
+}
+div.lavender:hover .warna-box {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    transform: rotate(10deg);
+}
+div.lavender p {
+    transition: color 0.3s ease;
+}
+div.lavender:hover p {
+    color: #e39ff6;
+}
+
+
+div.hobi-wrapper{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 30px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+
+div.Menggambar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 20px;
+    border-radius: 15px;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+    width: 180px;
+    min-height: 220px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 3px solid rgba(166, 76, 186, 0.3);
+}
+
+div.Menggambar:hover {
+    transform: scale(1.12) translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.95);
+    border-color: #a64cba;
+}
+
+div.Menggambar img {
+    width: 150px;
+    height: 150px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 3px solid #a64cba;
+    padding: 0;
+    transition: transform 0.3s ease;
+}
+
+div.Menggambar:hover img {
+    transform: scale(1.05);
+}
+
+div.Menggambar p {
+    margin-top: 12px;
+    font-weight: bold;
+    color: #461b50;
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+div.musik {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 20px;
+    border-radius: 15px;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+    width: 180px;
+    min-height: 220px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 3px solid rgba(166, 76, 186, 0.3);
+}
+
+div.musik:hover {
+    transform: scale(1.12) translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.95);
+    border-color: #a64cba;
+}
+
+div.musik img {
+    width: 150px;
+    height: 150px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 3px solid #a64cba;
+    padding: 0;
+    transition: transform 0.3s ease;
+}
+
+div.musik:hover img {
+    transform: scale(1.05);
+}
+
+div.musik p {
+    margin-top: 12px;
+    font-weight: bold;
+    color: #461b50;
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+div.game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 20px;
+    border-radius: 15px;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+    width: 180px;
+    min-height: 220px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 3px solid rgba(166, 76, 186, 0.3);
+}
+
+div.game:hover {
+    transform: scale(1.12) translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.95);
+    border-color: #a64cba;
+}
+
+div.game img {
+    width: 150px;
+    height: 150px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 3px solid #a64cba;
+    padding: 0;
+    transition: transform 0.3s ease;
+}
+
+div.game:hover img {
+    transform: scale(1.05);
+}
+
+div.game p {
+    margin-top: 12px;
+    font-weight: bold;
+    color: #461b50;
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+div.nonton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 20px;
+    border-radius: 15px;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+    width: 180px;
+    min-height: 220px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 3px solid rgba(166, 76, 186, 0.3);
+}
+
+div.nonton:hover {
+    transform: scale(1.12) translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.95);
+    border-color: #a64cba;
+}
+
+div.nonton img {
+    width: 150px;
+    height: 150px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 3px solid #a64cba;
+    padding: 0;
+    transition: transform 0.3s ease;
+}
+
+div.nonton:hover img {
+    transform: scale(1.05);
+}
+
+div.nonton p {
+    margin-top: 12px;
+    font-weight: bold;
+    color: #461b50;
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}

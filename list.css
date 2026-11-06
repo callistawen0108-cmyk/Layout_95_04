@@ -1,0 +1,286 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "curls";
+    src: url("Bremlin.otf");
+}
+
+@font-face {
+    font-family: "glitter";
+    src: url("Magic Crush.otf");
+}
+
+body {
+    min-height: 100vh;
+    background-color: #c6a0f4;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url("cute\ spacey\ bg.jpg");
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 0;
+    position: relative;
+}
+
+.planetspy {
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    width: 300px;
+    height: auto;
+    z-index: 100;
+    pointer-events: none;
+    animation: breathe 3s ease-in-out infinite;
+    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.6));
+}
+
+.planet {
+    position: absolute;
+    top: 150px;
+    right: 40px;
+    width: 250px;
+    height: auto;
+    z-index: 100;
+    pointer-events: none;
+    animation: floatSpy 4s ease-in-out infinite;
+    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.6));
+}
+
+.starelord {
+    position: absolute;
+    top: 850px;
+    left: 20px;
+    width: 220px;
+    height: auto;
+    z-index: 100;
+    pointer-events: none;
+    animation: floatSpy 5s ease-in-out infinite reverse;
+    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.6));
+}
+
+@keyframes breathe {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes floatSpy {
+    0% { transform: translateY(0) rotate(5deg); }
+    50% { transform: translateY(-15px) rotate(-5deg); }
+    100% { transform: translateY(0) rotate(5deg); }
+}
+
+@media (max-width: 1400px) {
+    .planetspy, .planet, .starelord {
+        display: none;
+    }
+}
+
+.header {
+    background-color: rgb(79, 68, 199);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: block;
+    line-height: 0;
+}
+
+.banner-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.topnav {
+    width: 100%;
+    background-color: rgb(147, 92, 250);
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 18px 16px;
+    text-decoration: none;
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+.topnav a:hover {
+    background-color: azure;
+    color: brown;
+}
+
+.main-content {
+    width: 100%;
+    max-width: 1100px;
+    padding: 30px 20px;
+}
+
+.judul-halaman {
+    margin: 40px 0;
+    font-family: "glitter", system-ui, sans-serif;
+    color: #fcd6ff;
+    background-color: #935bd8;
+    padding: 15px 40px;
+    border-radius: 10px;
+    font-size: 36px;
+    letter-spacing: 4px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tugas-box {
+    margin-bottom: 30px;
+}
+
+.judul-tugas {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #2b1b4a;
+    margin-bottom: 10px;
+    background-color: #f9a8d4;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+/* Daftar Buah */
+.kotak-buah {
+    background-color: #d8b4fe;
+    padding: 15px;
+    border: 4px solid #8b5cf6;
+    border-radius: 5px;
+}
+
+.list-buah {
+    list-style-type: upper-roman;
+    padding-left: 40px;
+    color: #2b1b4a;
+    font-weight: bold;
+}
+
+.list-buah li {
+    background-color: #e9d5ff;
+    margin-bottom: 5px;
+    padding: 8px;
+    border: 1px solid #c084fc;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    cursor: pointer;
+}
+
+.list-buah li:hover {
+    background-color: #f9a8d4;
+    color: #4b1e78;
+}
+
+.list-buah li.highlight-coklat {
+    background-color: #1e3a8a;
+    color: #fff;
+    border: 1px solid #1e40af;
+}
+
+.list-buah li.highlight-coklat:hover {
+    background-color: #f9a8d4;
+    color: #1e3a8a;
+}
+
+.kotak-lorem {
+    background-color: #c4b5fd;
+    padding: 15px;
+    border: 4px solid #f9a8d4;
+    border-radius: 5px;
+}
+
+.list-lorem {
+    list-style-type: square;
+    padding-left: 40px;
+    color: #1a1030;
+}
+
+.list-lorem li {
+    background-color: #fbcfe8;
+    margin-bottom: 8px;
+    padding: 10px;
+    border: 1px solid #f472b6;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.kotak-icon {
+    background-color: #8b5cf6;
+    padding: 15px;
+    border: 4px solid #d8b4fe;
+    border-radius: 5px;
+}
+
+.list-icon {
+    list-style-type: disc;
+    padding-left: 40px;
+    color: #1a1030;
+}
+
+.list-icon li {
+    background-color: #4b1e78;
+    color: #fcd6ff;
+    margin-bottom: 5px;
+    padding: 8px 15px;
+    border: 1px solid #a64cba;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.list-ikon-img {
+    width: 24px;
+    height: 24px;
+    margin-right: 15px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+
+.list-dasar {
+    padding-left: 40px;
+    background-color: #b388eb;
+    padding: 15px 15px 15px 50px;
+    border: 3px solid #a64cba;
+    border-radius: 5px;
+    color: #2b0a4a;
+    font-family: "curls", system-ui, sans-serif;
+    font-size: 20px;
+}
+
+.list-dasar li {
+    margin-bottom: 5px;
+}
+
+.list-dasar ul, .list-dasar ol {
+    margin-top: 5px;
+}
+
+.footer {
+    background-color: rgb(48, 56, 170);
+    padding: 25px;
+    text-align: center;
+    width: 100%;
+    margin-top: 40px;
+    color: #ffffff;
+    font-weight: bold;
+    font-family: "glitter", system-ui, sans-serif;
+    font-size: 18px;
+    letter-spacing: 10px;
+}
